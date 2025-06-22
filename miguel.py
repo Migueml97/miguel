@@ -29,6 +29,26 @@ while piso != 6:
     piso = int(input("Introduce un número del 1 al 6: "))
 print("Adios")
 
+#Ejercicio 2 -> Validador de IP's
+
+IP = input("Introduce una IP: ")
+
+test = ["192.168.1.1", "192.168.1.01", "01.02.03.04", "....", "192.a.1.1", "256.0.0.1", "192.168.1.1.1", "192.168.1"]
+def validar_ip(ip) -> bool:
+    octetos = ip.split(".")
+    if len(octetos) != 4:
+        return False
+    for octeto in octetos:
+        try:    
+            octeto = int(octeto)
+        except ValueError:
+            return False
+        if octeto < 0 or octeto >255:
+            return False
+    return True
+
+print(validar_ip(IP))
+
 
             
 
