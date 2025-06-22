@@ -49,6 +49,15 @@ def validar_ip(ip) -> bool:
 
 print(validar_ip(IP))
 
+#tambien se puede hacer con la libreria import ipaddress
+#IP = input("Introduce una IP")
+#def validar_ip(ip):
+#try:
+#ipaddress.ip_address(ip)
+#except ValueError:
+#return False
+#return True
+
 
             
 
