@@ -59,6 +59,14 @@ print(validar_ip(IP))
 #return True
 #print(validar_ip(IP))
 
+#Ejercicio 3 -> ordenar una lista (pdt) *copiado
+cadena = "111 333 222"
+def order_weight(strng: str) -> str:  # "111 333 222"
+    secuencia = strng.split()  # Dividimos en numeros ["111", "333", "222"]
+    secuencia_final = sorted(secuencia, key=ordenar)  # Ordename LISTA por PRIMERO numero total y LUEGO los digitos
+    return ' '.join(secuencia_final)  # Se devuelve una lista ordenada como STRING con ESPACIOS
+print(order_weight(Cadena))
+
 
             
 
