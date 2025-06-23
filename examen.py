@@ -50,6 +50,47 @@ print(notas[1:-1])
 
 
 
+#Hacer un sistema de base de datos de alumnos, con nombre, edad y cursos en los que estan apuntados
+
+base_datos = {}  # Diccionario principal
+id_actual = 1     # Para dar IDs únicos a cada entrada
+
+while True:
+    nombre = input("Nombre del alumno (o escribe 'salir' para terminar): ")
+    if nombre.lower() == "salir":
+        break
+
+    apellido = input("Apellido: ")
+    edad = int(input("Edad: "))
+    curso = input("Curso: ")
+    
+    # Recoger notas
+    notas = []
+    while True:
+        nota = input("Introduce una nota (-1 para terminar): ")
+        if nota == "-1":
+            break
+        try:
+            notas.append(float(nota))
+        except ValueError:
+            print("Eso no es una nota válida.")
+
+    base_datos[id_actual] = {
+        "Nombre": nombre,
+        "Apellido": apellido,
+        "Edad": edad,
+        "Curso": curso,
+        "Notas": notas
+    }
+    id_actual += 1
+
+# Mostrar toda la base de datos
+print("\n📚 Base de datos completa:")
+for id, datos in base_datos.items():
+    print(f"ID {id}: {datos}")
+
+
+
 
 
 
