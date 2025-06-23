@@ -9,9 +9,11 @@ piso = int(input("Estás en un ascensor en la planta cero y tiene las siguentes 
 " 6 -> Salir: "))
 
 piso_actual = 0
-
+piso_min = 0
+piso_max = 5
+#guardar el maximo y numero de pisos en variables
 while piso != 6:
-    if piso >= 0 and piso <=5:
+    if piso >= piso_min and piso <= piso_max:
         if piso > piso_actual:
             print("Subiendo..")
             for planta in range(piso_actual, piso + 1):
