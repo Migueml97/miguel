@@ -27,23 +27,26 @@ print("¿Email válido?", valido)
 
 #Quiero que se pregunten notas una a una (tendreis que usar un bucle) y que se vayan guardando, hasta que se introduzca un -1, entonces, quiero que me mostreis las notas, la primera, las tres ultimas, y las que van desde la segunda nota hasta la penultima
 notas = []
-nota = int(input("Introduce una nota "))
+nota = float(input("Introduce una nota "))
 
 while nota != -1:
     notas.append(nota)
-    nota = int(input("Introduce una nota "))
+    nota = float(input("Introduce una nota "))
+
+#todas las notas
+print(notas)
 
 #primera nota
 print(notas[0])
 
 #tres ultimas
 if len(notas) >= 3:
-    print(notas)
+    print(notas[-3:])
 else:
     print("no hay suficientes notas")
 
 #de la 2 a penultima
-    
+print(notas[1:-1])
 
 
 
