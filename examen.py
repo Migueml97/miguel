@@ -52,11 +52,12 @@ print(notas[1:-1])
 
 #Hacer un sistema de base de datos de alumnos, con nombre, edad y cursos en los que estan apuntados
 
+from pprint import pprint
 base_datos = {}  # Diccionario principal
 id_actual = 1     # Para dar IDs únicos a cada entrada
 
 while True:
-    nombre = input("Nombre del alumno (o escribe 'salir' para terminar): ")
+    nombre = input("Nombre del alumno (o escribe 'salir' para finalizar la ejecucion): ")
     if nombre.lower() == "salir":
         break
 
@@ -67,7 +68,7 @@ while True:
     # Recoger notas
     notas = []
     while True:
-        nota = input("Introduce una nota (-1 para terminar): ")
+        nota = input("Introduce una nota (-1 para finalizar la recogida de notas): ")
         if nota == "-1":
             break
         try:
@@ -85,12 +86,8 @@ while True:
     id_actual += 1
 
 # Mostrar toda la base de datos
-print("\n📚 Base de datos completa:")
+pprint("Base de datos completa: ")
 for id, datos in base_datos.items():
     print(f"ID {id}: {datos}")
-
-
-
-
 
 
