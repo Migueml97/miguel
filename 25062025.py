@@ -200,4 +200,37 @@ alumno1.estudiar()
 alumno2 = TajamarAlumnoNoDataClass(nombre="Belén", edad=25)
 alumno2.estudiar()
 
+#otro
+import dataclasses
+
+# Dataclass
+@dataclasses.dataclass
+class Alumno():  # dataclass!
+    edad: int
+    nombre: str = ""
+
+    def preguntar(self):
+        pass
+
+    def entregar_ejerciio(self):
+        pass
+
+class Curso:
+    def __init__(self,titulo,alumnos:list[Alumno]):
+        self.titulo = titulo
+        self.alumnos  = alumnos
+
+    def listar_alumnos(self):
+        for alumno in alumnos:
+            print (alumno)
+
+
+
+alejandro = Alumno(23,"Alejandro")
+lorenzo = Alumno(43,"Lorenzo Silva")
+alumnos = [alejandro, lorenzo]
+curso_Tajamar = Curso("Python",alumnos)
+
+curso_Tajamar.listar_alumnos()
+
  
